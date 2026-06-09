@@ -1,3 +1,9 @@
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
 h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 170px;
@@ -15,13 +21,14 @@ h2 {
 h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 70px;
-    font-weight: semi-bold;
+    font-weight: normal;
     color: #003CAC;
 }
 
 h4 {
     font-family: 'Inter', sans-serif;
     font-size: 24px;
+    font-weight: normal;
 }
 
 p {
@@ -38,16 +45,58 @@ header {
 
 /* HOME */
 
-.home > .titulos {
+main.index-content > .home > .titulos {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    gap: 30px;
+    gap: 40px;
 }
 
-.about > .title-about {
+/* EDITORIAL */
+main.index-content > .editorial > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    margin: none;
+   
+}
+
+
+.editorial > div > div > p {
+    width: 412px;
+    height: 187px;
+}
+
+
+/* BRANDING */
+.branding > div > div > p {
+    width: 412px;
+    height: 306px;
+    text-align: right;
+}
+
+.branding > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+
+/* APP */
+.app > div > div > p {
+    width: 465px;
+    height: 170px;
+}
+
+
+/* ABOUT */
+main > section#about .about-content {
+    padding: 0 40px;
+}
+
+main > section#about > .title-about {
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -56,11 +105,26 @@ header {
 }
 
 
+/* GALERIA */
+main > section#galeria > div.galeria > img {
+    width: 364px;
+    height: 243px;
+    border-radius: 10px;
+}
+
+main > section#galeria > div.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+
 /* FOOTER */
 
 footer {
   background-color:#003CAC;
   color: white;
+  padding: none;
 }
 
 .footer-container {
@@ -73,3 +137,10 @@ footer {
 .footer-container > div > p:first-child {
   font-weight: bold;
 }
+
+/* GALERIA
+main > section#galeria > div.galeria > img {
+    width: 310px;
+    height: 207px;
+    border-radius: 10px;
+} */
