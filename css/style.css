@@ -1,3 +1,37 @@
-p{
+h1 {
     font-family: 'Poppins', sans-serif;
+    font-size: 170px;
+    font-weight: bold;
+    color: #003CAC;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 96px;
+    font-weight: semi-bold;
+    color: #003CAC;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    font-weight: semi-bold;
+    color: #003CAC;
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.home > .titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
 }
