@@ -1,7 +1,6 @@
 main {
     max-width: 1200px;
     margin: 40px auto;
-    padding: 0 20px;
 }
 
 h1 {
@@ -9,13 +8,7 @@ h1 {
     font-size: 170px;
     font-weight: bold;
     color: #003CAC;
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 96px;
-    font-weight: semi-bold;
-    color: #003CAC;
+    margin: 0;
 }
 
 h3 {
@@ -23,17 +16,20 @@ h3 {
     font-size: 70px;
     font-weight: normal;
     color: #003CAC;
+    margin: 20px 0;
 }
 
 h4 {
     font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: normal;
+    margin: 10px 0;
 }
 
 p {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
+    margin: 10px 0;
 }
 
 header {
@@ -92,17 +88,76 @@ main.index-content > .editorial > div {
 
 
 /* ABOUT */
-main > section#about .about-content {
-    padding: 0 40px;
+
+span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 96px;
+    font-weight: semi-bold;
+    color: #003CAC;
 }
 
-main > section#about > .title-about {
+main > section.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main > section.about > div.title-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 40px;
+}
+
+main > section.about > div.title-content > div.about-content {
+    gap: 0px 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+main > section.about > h3 {
     display: flex;
     flex-direction: column;
     justify-content: left;
     padding: 0;
-    gap: 10px;
 }
+
+main > section.about > div.title-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    padding: 0;
+    gap: 40px;
+}
+
+main > section.about > div.container-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 408px;
+    height: 492px;
+}
+
+main > section.about > div.container-img > div.rectangulo {
+    width: 408px;
+    height: 492px;
+    background-color: #003CAC;
+    border-radius: 20px;
+    z-index: 1;
+    position: absolute; 
+}
+
+main > section.about > div.container-img > img {
+    position: relative;
+    border-radius: 20px;
+    z-index: 2;
+}
+
 
 
 /* GALERIA */
@@ -118,6 +173,11 @@ main > section#galeria > div.galeria {
   gap: 35px;
 }
 
+main > section#galeria {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
 
 /* FOOTER */
 
