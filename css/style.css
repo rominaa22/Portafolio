@@ -3,6 +3,11 @@ main {
     margin: 40px auto;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 170px;
@@ -41,12 +46,24 @@ header {
 
 /* HOME */
 
-main.index-content > .home > .titulos {
+section.home > div.titulos {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: left;
+    gap: 40px;
+    align-content: center;
+}
+
+section.home > div.imghome {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    margin-top: 40px;
+}
+
+section.home > div.imghome > img {
+    width: 560px;
+    height: 170px; 
 }
 
 /* EDITORIAL */
@@ -177,6 +194,13 @@ main > section#galeria {
   display: flex;
   align-content: center;
   flex-direction: column;
+}
+
+main > section#galeria > h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px 20px 0px;
 }
 
 /* FOOTER */
