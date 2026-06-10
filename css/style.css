@@ -45,6 +45,9 @@ header {
 }
 
 /* HOME */
+section.home {
+    padding: 0 0 180px;
+}
 
 section.home > div.titulos {
     display: flex;
@@ -72,6 +75,7 @@ main > section.editorial {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 0 180px;
 }
 
 main > .editorial > div.texto-editorial {
@@ -112,7 +116,55 @@ main > section.editorial > div {
 
 
 /* BRANDING */
-.branding > div > div > p {
+main > section.branding {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 0 180px;
+}
+
+.branding > div.img-branding {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.branding > div.img-branding > div.img-branding-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.branding > div.img-branding > div.img-branding-1 > img {
+    width: 183px;
+    height: 259px;
+    border-radius: 10px;
+}
+
+.branding > div.img-branding > div.img-branding-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 53px;
+}
+
+.branding > div.img-branding > div.img-branding-2 > img {
+    width: 288px;
+    height: 192px;
+    border-radius: 10px;
+}
+
+.branding > div.texto-branding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: none;
+    width: fit-content;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.branding > div.texto-branding > div > p {
     width: 412px;
     height: 306px;
     text-align: right;
@@ -125,6 +177,7 @@ main > section.app {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 0 50px;
 }
 
 main > section.app > div.texto-app {
@@ -260,6 +313,7 @@ main > section#galeria {
   display: flex;
   align-content: center;
   flex-direction: column;
+  padding: 0 0 50px;
 }
 
 main > section#galeria > h3 {
