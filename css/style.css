@@ -67,20 +67,48 @@ section.home > div.imghome > img {
 }
 
 /* EDITORIAL */
-main.index-content > .editorial > div {
+main > section.editorial {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 40px;
+    align-items: center;
+}
+
+main > .editorial > div.texto-editorial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: none;
-   
+    width: fit-content;
 }
 
 
-.editorial > div > div > p {
+main > .editorial > div > div > p {
     width: 412px;
     height: 187px;
 }
+
+main > section.editorial > div.img > img {
+    width: 286px;
+    height: 215px;
+    border-radius: 10px;
+}
+
+main > section.editorial > div.img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 40px;
+    width: fit-content;
+}
+
+main > section.editorial > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+    margin: none;
+}
+
 
 
 /* BRANDING */
@@ -88,12 +116,6 @@ main.index-content > .editorial > div {
     width: 412px;
     height: 306px;
     text-align: right;
-}
-
-.branding > div > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
 }
 
 
