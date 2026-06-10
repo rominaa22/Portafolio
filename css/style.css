@@ -120,9 +120,53 @@ main > section.editorial > div {
 
 
 /* APP */
-.app > div > div > p {
+main > section.app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main > section.app > div.texto-app {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: none;
+    width: fit-content;
+}
+
+main > section.app > div.texto-app > div > p {
     width: 465px;
     height: 170px;
+}
+
+main > section.app > div.img-app > img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: none;
+    width: fit-content;
+}
+
+main > section.app > div.img-app > img {
+    width: 286px;
+    height: 160px;
+    border-radius: 10px;
+}
+
+main > section.app > div.img-app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 40px;
+    width: fit-content;
+}
+
+main > section.app {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+    margin: none;
 }
 
 
