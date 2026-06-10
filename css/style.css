@@ -49,12 +49,16 @@ section.home {
     padding: 0 0 180px;
 }
 
-section.home > div.titulos {
+section.home > div {
+    display: flex;
+    justify-content: center;
+}
+
+section.home > div > div.titulos {
     display: flex;
     flex-direction: column;
     align-items: left;
-    gap: 40px;
-    align-content: center;
+    justify-content: center;
 }
 
 section.home > div.imghome {
