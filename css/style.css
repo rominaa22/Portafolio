@@ -259,6 +259,8 @@ span {
     font-size: 96px;
     font-weight: semi-bold;
     color: #003CAC;
+    width: fit-content;
+    line-height: 0.8;
 }
 
 main > section.about {
@@ -266,24 +268,31 @@ main > section.about {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 100px 0 0 0;
 }
 
-main > section.about > div.title-content {
+main > section.about > div.container-about {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
-    justify-content: left;
-    gap: 40px;
 }
 
-main > section.about > div.title-content > div.about-content {
-    gap: 0px 90px;
+main > section.about > div.container-about > div.content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
+    gap: 60px;
+}
+
+main > section.about > div.container-about > div.content > div.about-content {
+    gap: 0px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 
-main > section.about > h3 {
+main > section.about > div.container-about > div > h3 {
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -323,6 +332,20 @@ main > section.about > div.container-img > img {
     z-index: 2;
 }
 
+main > section.about > .container-about > div.content > div.about-content > div > i {
+    font-size: 30px;
+    color: #003CAC;
+    margin-right: 15px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+main > section.about > .container-about > div.content > div.about-content > div > i:hover {
+    color: #000000;
+    transform: scale(1.2);
+}
+
 
 
 /* GALERIA */
@@ -330,6 +353,13 @@ main > section#galeria > div.galeria > img {
     width: 364px;
     height: 243px;
     border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease,
+}
+
+main > section#galeria > div.galeria > img:hover {
+    transform: scale(1.04);
 }
 
 main > section#galeria > div.galeria {
@@ -370,10 +400,3 @@ footer {
 .footer-container > div > p:first-child {
   font-weight: bold;
 }
-
-/* GALERIA
-main > section#galeria > div.galeria > img {
-    width: 310px;
-    height: 207px;
-    border-radius: 10px;
-} */
