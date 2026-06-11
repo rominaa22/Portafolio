@@ -31,7 +31,7 @@ h4 {
     font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: 300;
-    margin: 10px 10px;
+    margin: 20px 0;
 }
 
 p {
@@ -80,6 +80,10 @@ section.home > div > div.titulos {
     align-items: left;
     justify-content: center;
     margin: 40px 0 0 0;
+}
+
+section.home > div > div.titulos > h4 {
+    margin: 10px 10px;
 }
 
 section.home > div.imghome {
