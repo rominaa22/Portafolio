@@ -327,6 +327,7 @@ main > section.about > div.container-img > img {
     position: relative;
     border-radius: 20px;
     z-index: 2;
+    
 }
 
 main > section.about > .container-about > div.content > div.about-content > div > i {
@@ -503,6 +504,37 @@ footer {
         height: auto;
         text-align: left;
     }
+
+    /* ABOUT */
+    main > section#galeria > div.galeria > img {
+        width: 590px ;
+    }
+
+    main > section.about > div.container-img > div.rectangulo {
+        width: 315px;
+        height: 380px;
+    }
+
+    main > section.about > div.container-img > img {
+        width: 252px;
+        height: 320px;
+    }
+
+    main > section.about > div.container-img {
+        width: fit-content;
+        height: fit-content;
+    }  
+
+    main > section.about {
+        flex-direction: column-reverse;
+        margin: 40px 0 0 0;
+    }
+
+    main > section.about > .container-about > div.content {
+        gap: 40px 0 0 0;
+    }
+
+
 
     footer {
         margin: 0 -50px;
