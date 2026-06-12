@@ -402,26 +402,126 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 720px) {
-    main {
-        margin: 20px;
+    body {
+        margin: 0 50px;
     }
     
     h1 {
         font-size: 100px;
     }
 
+    h3 {
+        font-size: 50px;
+    }
+
     h4 {
         font-size: 18px;
+    }
+
+    p {
+        margin: 0 0 50px 0;
+    }
+    
+    header > nav {
+       margin: 40px 0 0 0; 
     }
 
     main > section#galeria > div.galeria > img {
         width: 40%;
     }
 
+    section.home {
+        padding: 0 0 100px;
+    }
+
+
+    /* EDITORIAL */
     main > section.editorial {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 0 100px;
+    }
+
+    .editorial > div.texto-editorial {
+        display: flex;
+        flex-direction: column;
+        margin: none;
+        width: center;
+    
+    }
+
+    .editorial > div.texto-editorial > div > p {
+        width: auto;
+        height: auto;
+    }
+
+
+    /* BRANDING */
+    main > section.branding {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 100px;
+    }
+
+    .branding > div.texto-branding {
+        display: flex;
+        flex-direction: column;
+        margin: none;
+        text-align: left;
+    }
+
+    section.branding > div.texto-branding > div > h3 {
+        text-align: left;
+    }
+
+    .branding > div.texto-branding > div > p {
+        width: auto;
+        height: auto;
+        text-align: left;
+    }
+
+
+    /* APP */
+    main > section.app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    main > section.app > div.texto-app {
+        display: flex;
+        flex-direction: column;
+        margin: none;
+        width: center;
+    }
+
+    main > section.app > div.texto-app > div > p {
+        width: auto;
+        height: auto;
+        text-align: left;
+    }
+
+    footer {
+        margin: 0 -50px;
+    }
+
+    footer > div.footer-container > div.contact-info > p {
+        margin: 10px 0;
+    }
+
+    footer > div.footer-container > div.contact-info > div > p {
+        margin: 10px 0;
+    }
+
+    footer > div.footer-container > div.social-media > p {
+        margin: 10px 0;
+    }
+
+    footer > div.footer-container > div.social-media > div > p {
+        margin: 10px 0;
     }
 
 }
