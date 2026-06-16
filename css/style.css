@@ -1,6 +1,6 @@
 main {
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 1400px;
+    margin: 0 60px;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 170px;
+    font-size: clamp(48px, 12vw, 170px);
     font-weight: bold;
     color: #003CAC;
     margin: 0;
@@ -21,22 +21,22 @@ h1 {
 
 h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 70px;
+    font-size: clamp(32px, 6vw, 70px);
     font-weight: normal;
     color: #003CAC;
-    margin: 20px 0;
+    margin: 0px 0;
 }
 
 h4 {
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: clamp(18px, 3vw, 24px);
     font-weight: 300;
     margin: 20px 0;
 }
 
 p {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: clamp(12px, 1.5vw, 14px);
     margin: 10px 0;
 }
 
@@ -94,8 +94,9 @@ section.home > div.imghome {
 }
 
 section.home > div.imghome > img {
-    width: 560px;
-    height: 170px; 
+    max-width: 100%;
+    height: auto;
+    width: 50%;
 }
 
 /* EDITORIAL */
@@ -105,41 +106,44 @@ main > section.editorial {
     justify-content: space-between;
     align-items: center;
     padding: 0 0 180px;
+    gap: 40px;
 }
 
 main > .editorial > div.texto-editorial {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: none;
+    margin: 0;
     width: fit-content;
 }
 
 
 main > .editorial > div > div > p {
-    width: 412px;
-    height: 187px;
+    max-width: 100%;
+    width: fit-content;
+    height: auto;
 }
 
 main > section.editorial > div.img > img {
-    width: 286px;
-    height: 215px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    width: fit-content;
 }
 
 main > section.editorial > div.img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 40px;
     width: fit-content;
+    gap: 40px;
 }
 
 main > section.editorial > div {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     align-items: center;
-    margin: none;
+    margin: 0;
+    width: fit-content;
 }
 
 
@@ -149,54 +153,52 @@ main > section.branding {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 0 0 180px;
+    gap: 40px;
+}
+
+.branding > div.texto-branding {
+    flex: 1 1 50%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    text-align: right;
+    justify-content: flex-end;
 }
 
 .branding > div.img-branding {
+    flex: 1 1 50%;
+    min-width: 0;
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+    justify-content: center;
 }
 
-.branding > div.img-branding > div.img-branding-1 {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-.branding > div.img-branding > div.img-branding-1 > img {
-    width: 183px;
-    height: 259px;
+.branding > div.img-branding > img {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
-.branding > div.img-branding > div.img-branding-2 {
-    display: flex;
-    flex-direction: row;
-    gap: 53px;
-}
-
-.branding > div.img-branding > div.img-branding-2 > img {
-    width: 288px;
-    height: 192px;
-    border-radius: 10px;
-}
 
 .branding > div.texto-branding {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: none;
-    width: fit-content;
+    margin: 0;
     text-align: right;
     justify-content: flex-end;
 }
 
 .branding > div.texto-branding > div > p {
-    width: 412px;
-    height: 306px;
-    text-align: right;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -213,31 +215,27 @@ main > section.app > div.texto-app {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: none;
-    width: fit-content;
+    margin: 0;
+    max-width: 600px;
 }
 
 main > section.app > div.texto-app > div > p {
-    width: 465px;
-    height: 170px;
+    width: 100%;
+    height: auto;
 }
 
 main > section.app > div.img-app > img {
-    width: 286px;
-    height: 160px;
-}
-
-main > section.app > div.img-app > img {
-    width: 286px;
-    height: 160px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    width: fit-content;
 }
 
 main > section.app > div.img-app {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 40px;
-    width: fit-content;
+    max-width: 600px;
 }
 
 main > section.app {
@@ -245,7 +243,8 @@ main > section.app {
     flex-direction: row;
     align-items: flex-start;
     align-items: center;
-    margin: none;
+    margin: 0;
+    gap: 40px;
 }
 
 
@@ -254,7 +253,7 @@ main > section.app {
 span {
     font-family: 'Poppins', sans-serif;
     font-size: 96px;
-    font-weight: semi-bold;
+    font-weight: 500;
     color: #003CAC;
     width: fit-content;
     line-height: 0.8;
@@ -402,33 +401,27 @@ footer {
 
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    main {
+        margin: 0 40px;
+    }
+
+    main > section.editorial > div.img,
+    main > section.branding > div.img-branding,
+    main > section.app > div.img-app {
+        gap: 20px;
+    }
+
+    main > section.editorial,
+    main > section.branding {
+        padding: 0 0 120px;
+    }
+
+}
+
 @media screen and (max-width: 720px) {
-    body {
-        margin: 0 50px;
-    }
-    
-    h1 {
-        font-size: 100px;
-    }
-
-    h3 {
-        font-size: 50px;
-    }
-
-    h4 {
-        font-size: 18px;
-    }
-
-    p {
-        margin: 0 0 50px 0;
-    }
-    
-    header > nav {
-       margin: 40px 0 0 0; 
-    }
-
-    main > section#galeria > div.galeria > img {
-        width: 40%;
+    main {
+        margin: 0 40px;
     }
 
     section.home {
@@ -447,8 +440,8 @@ footer {
     .editorial > div.texto-editorial {
         display: flex;
         flex-direction: column;
-        margin: none;
-        width: center;
+        margin: 0;
+        width: 100%;
     
     }
 
@@ -469,7 +462,9 @@ footer {
     .branding > div.texto-branding {
         display: flex;
         flex-direction: column;
-        margin: none;
+        align-items: flex-start;
+        margin: 0;
+        width: fit-content;
         text-align: left;
     }
 
@@ -483,20 +478,22 @@ footer {
         text-align: left;
     }
 
+    
 
     /* APP */
     main > section.app {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0;
+        align-content: center;
+        width: 100%;
     }
 
     main > section.app > div.texto-app {
         display: flex;
         flex-direction: column;
-        margin: none;
-        width: center;
+        margin: 0;
+        width: 100%;
     }
 
     main > section.app > div.texto-app > div > p {
@@ -505,56 +502,48 @@ footer {
         text-align: left;
     }
 
-    /* ABOUT */
-    main > section#galeria > div.galeria > img {
-        width: 590px ;
-    }
-
-    main > section.about > div.container-img > div.rectangulo {
-        width: 315px;
-        height: 380px;
-    }
-
-    main > section.about > div.container-img > img {
-        width: 252px;
-        height: 320px;
-    }
-
-    main > section.about > div.container-img {
-        width: fit-content;
-        height: fit-content;
-    }  
-
-    main > section.about {
-        flex-direction: column-reverse;
-        margin: 40px 0 0 0;
-    }
-
-    main > section.about > .container-about > div.content {
-        gap: 40px 0 0 0;
-    }
 
 
-
-    footer {
-        margin: 0 -50px;
-    }
-
-    footer > div.footer-container > div.contact-info > p {
-        margin: 10px 0;
-    }
-
-    footer > div.footer-container > div.contact-info > div > p {
-        margin: 10px 0;
-    }
-
-    footer > div.footer-container > div.social-media > p {
-        margin: 10px 0;
-    }
-
-    footer > div.footer-container > div.social-media > div > p {
-        margin: 10px 0;
-    }
 
 }
 
+
+@media screen and (max-width: 520px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    header > nav {
+        margin: 40px;
+    }
+    
+    header > .nav-desktop > p {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    header > .nav-desktop > p > a {
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    section.home {
+        padding: 0 0 60px;
+    }
+
+    main {
+        margin: 0 30px 0 30px;
+    }
+
+    main > section.editorial,
+    main > section.branding {
+        padding: 0 0 80px;
+    }
+}
