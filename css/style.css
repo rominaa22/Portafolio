@@ -309,13 +309,13 @@ main > section.about > div.container-img {
     display: flex;
     justify-content: center;
     align-items: center;  
-    width: 408px;
-    height: 492px;
+    width: clamp(220px, 40vw, 408px);
+    aspect-ratio: 408 / 492;
 }
 
 main > section.about > div.container-img > div.rectangulo {
-    width: 408px;
-    height: 492px;
+    width: 100%;
+    height: 100%;
     background-color: #003CAC;
     border-radius: 20px;
     z-index: 1;
@@ -326,7 +326,9 @@ main > section.about > div.container-img > img {
     position: relative;
     border-radius: 20px;
     z-index: 2;
-    
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
 }
 
 main > section.about > .container-about > div.content > div.about-content > div > i {
@@ -417,6 +419,14 @@ footer {
         padding: 0 0 120px;
     }
 
+}
+
+@media screen and (max-width: 947px) {
+    main > section.about {
+        flex-direction: column;
+        margin: 60px 0 0 0;
+        gap: 60px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -551,5 +561,5 @@ footer {
     main > section#galeria > div.galeria {
         grid-template-columns: repeat(1, 1fr)
     }
-    
+
 }
