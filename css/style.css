@@ -347,13 +347,13 @@ main > section.about > .container-about > div.content > div.about-content > div 
 
 /* GALERIA */
 main > section#galeria > div.galeria > img {
-    max-width: 364px;
-    max-height: 243px;
+    width: 100%;
+    height: 243px;
+    object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
-    display: inline-block;
+    display: block;
     transition: transform 0.3s ease;
-    width: 100%;
 }
 
 main > section#galeria > div.galeria > img:hover {
@@ -361,9 +361,9 @@ main > section#galeria > div.galeria > img:hover {
 }
 
 main > section#galeria > div.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 main > section#galeria {
@@ -502,8 +502,9 @@ footer {
         text-align: left;
     }
 
-
-
+    main > section#galeria > div.galeria {
+        grid-template-columns: repeat(2, 1fr)
+    }
 
 }
 
@@ -546,4 +547,9 @@ footer {
     main > section.branding {
         padding: 0 0 80px;
     }
+
+    main > section#galeria > div.galeria {
+        grid-template-columns: repeat(1, 1fr)
+    }
+    
 }
