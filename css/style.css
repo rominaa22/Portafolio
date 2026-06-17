@@ -551,8 +551,8 @@ footer {
     }
 
     @media screen and (max-width: 480px) {
-    main > section#galeria > div.galeria > img:last-child:nth-child(odd) {
-        display: block;
+        main > section#galeria > div.galeria > img:last-child:nth-child(odd) {
+            display: block;
+        }
     }
-
 }
