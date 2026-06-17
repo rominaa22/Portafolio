@@ -77,7 +77,6 @@ section.home > div {
 section.home > div > div.titulos {
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
     margin: 40px 0 0 0;
 }
@@ -387,7 +386,7 @@ main > section#galeria > h3 {
 footer {
   background-color:#003CAC;
   color: white;
-  padding: none;
+  padding: 0;
 }
 
 .footer-container {
@@ -463,6 +462,10 @@ footer {
         padding: 0 0 80px;
         flex-direction: column;
         align-items: center;
+    }
+
+    main > section#galeria > div.galeria > img:last-child:nth-child(odd) {
+        display: none;
     }
 
     /* EDITORIAL */
@@ -545,6 +548,11 @@ footer {
 
     main > section#galeria > div.galeria {
         grid-template-columns: repeat(1, 1fr)
+    }
+
+    @media screen and (max-width: 480px) {
+    main > section#galeria > div.galeria > img:last-child:nth-child(odd) {
+        display: block;
     }
 
 }
