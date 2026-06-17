@@ -252,7 +252,7 @@ main > section.app {
 
 span {
     font-family: 'Poppins', sans-serif;
-    font-size: 96px;
+    font-size: clamp(55px, 12vw, 96px);
     font-weight: 500;
     color: #003CAC;
     width: fit-content;
@@ -292,7 +292,7 @@ main > section.about > div.container-about > div > h3 {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    padding: 0;
+    padding: 0 0 20px;
 }
 
 main > section.about > div.title-img {
@@ -422,6 +422,10 @@ footer {
 }
 
 @media screen and (max-width: 947px) {
+    header > nav {
+        margin: 60px;
+    }
+    
     main > section.about {
         flex-direction: column;
         margin: 60px 0 0 0;
@@ -430,6 +434,10 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
+    header > nav {
+        margin: 40px;
+    }
+
     main {
         margin: 0 40px;
     }
@@ -438,47 +446,33 @@ footer {
         padding: 0 0 100px;
     }
 
+    main > section.about > div.container-about > div > h3 {
+        padding: 0 0 10px;
+    }
 
-    /* EDITORIAL */
-    main > section.editorial {
-        display: flex;
+    main > section#galeria > h3 {
+        margin: 60px 0px 20px 0px;
+    }
+
+    main > section#galeria {
+        padding: 0 0 20px;
+    }
+
+    main > section.editorial,
+    main > section.branding {
+        padding: 0 0 80px;
         flex-direction: column;
         align-items: center;
-        padding: 0 0 100px;
     }
 
+    /* EDITORIAL */
     .editorial > div.texto-editorial {
-        display: flex;
         flex-direction: column;
-        margin: 0;
-        width: 100%;
-    
-    }
-
-    .editorial > div.texto-editorial > div > p {
-        width: auto;
-        height: auto;
     }
 
 
     /* BRANDING */
-    main > section.branding {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 0 100px;
-    }
-
     .branding > div.texto-branding {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0;
-        width: fit-content;
-        text-align: left;
-    }
-
-    section.branding > div.texto-branding > div > h3 {
         text-align: left;
     }
 
@@ -488,30 +482,14 @@ footer {
         text-align: left;
     }
 
-    
 
     /* APP */
     main > section.app {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        align-content: center;
         width: 100%;
     }
-
-    main > section.app > div.texto-app {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        width: 100%;
-    }
-
-    main > section.app > div.texto-app > div > p {
-        width: auto;
-        height: auto;
-        text-align: left;
-    }
-
+    
     main > section#galeria > div.galeria {
         grid-template-columns: repeat(2, 1fr)
     }
@@ -529,10 +507,9 @@ footer {
 }
 
 
-
 @media screen and (max-width: 480px) {
     header > nav {
-        margin: 40px;
+        margin: 30px;
     }
     
     header > .nav-desktop > p {
@@ -544,7 +521,15 @@ footer {
         font-weight: bold;
         font-size: 15px;
     }
+
+    main > section.about > div.container-about > div > h3 {
+        padding: 0;
+    }
     
+    main > section.about {
+        margin: 30px 0 0 0;
+    }
+
     section.home {
         padding: 0 0 60px;
     }
